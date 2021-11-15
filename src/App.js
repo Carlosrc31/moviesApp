@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { Fragment } from 'react/cjs/react.production.min';
 import './App.css';
+import { Homepage, MovieInfo } from "./Components"
+import {
+  BrowserRouter as Router,
+  Route, 
+  Routes as Switch,
+  NavLink
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+        <header>
+          {/* Al dar click en "movies" nos manda a la Homepage */}
+          <NavLink to="/"> 
+            <h1 className="header_title">Movies</h1>
+          </NavLink>
+        </header>
+        <main>
+          {/* Rutas para cada caso de la página */}
+          <Switch>
+              <Route path="/movies/:movieId" element={<MovieInfo/>} />
+              <Route exact path="/" element={<Homepage/>} />
+              {/* Caso para cualquier página que no exista, hacer un componente de */}
+              <Route path="/" >
+              </Route>
+          </Switch>
+        </main>
+      </Router>
+    </Fragment>
   );
 }
 

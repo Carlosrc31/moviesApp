@@ -1,0 +1,24 @@
+.item{
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.item:hover{
+    opacity: 0.8;
+}
+
+.item_img{
+    background-color: azure;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    height: 345px;
+    width: 230px;
+}
+
+@media (max-width: 560px){
+    .item_img{
+        width: 85%;
+        height: auto;
+    }
+}

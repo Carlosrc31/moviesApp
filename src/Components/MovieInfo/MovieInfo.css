@@ -1,0 +1,23 @@
+.infoContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.size{
+    max-width: 400px;
+    margin: 15px;
+    height: 80%;
+}
+
+.img{
+    border-radius: 10px;
+}
+
+.details{
+    font-size: 1.5rem;
+}
+
+.item_one{
+    margin-top: 0;
+}

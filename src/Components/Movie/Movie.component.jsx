@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "/Users/carlosrosas/Documents/GitHub/DWA/movies-app/src/Components/Movie/Movie.css"
+import "./Movie.css"
 
 function Movie(props){
     let poster = "https://image.tmdb.org/t/p/w300" + props.movie.poster_path;

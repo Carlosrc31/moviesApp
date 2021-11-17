@@ -21,7 +21,7 @@ function App() {
         <main>
           {/* Rutas para cada caso de la página */}
           <Switch>
-              <Route path="/movies/:movieId" element={<MovieInfo/>} />
+              <Route path="/movies/:movieId" element={<MovieInfo/>} />{/**/}
               <Route exact path="/" element={<Homepage/>} />
               {/* Caso para cualquier página que no exista, hacer un componente de */}
               <Route path="/" >

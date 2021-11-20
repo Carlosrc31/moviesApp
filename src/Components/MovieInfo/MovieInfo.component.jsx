@@ -1,19 +1,28 @@
 import React, { useEffect, useState} from "react";
 import {useParams} from "react-router"
 import {getApi} from "../httpApi"
+import LoadPage from "../Loading/LoadPage.jsx"
 import MovieIn from "./MovieIn.json"
 import "./MovieInfo.css"
 
 function MovieInfo(){
     const {movieId}= useParams();//cada pelicula tiene un id el cual podemos leer con useParams, con este podemos leer la parte de la url que tenga el mismo identificador en este caso movieId
-
+    const [Loading,setLoading] = useState(true) //Estado que determinara si la pagina esta cargando
     const [MovieInfo, setMovieInfoMovieInfo]=useState(null);// variable donde se guardara el id de la pelicula
     
     useEffect(()=>{
+        setLoading(true)//La pagina estara cargando en espera de la petición de la api 
         getApi("/movie/"+movieId).then(data=>{
             setMovieInfoMovieInfo(data);
+            setLoading(false);
         })
     }, [movieId]);
+
+    //Ventana de Loading
+    if (Loading) {
+        return <LoadPage/>;
+    }
+
     if (!MovieInfo){
         return null;
     }

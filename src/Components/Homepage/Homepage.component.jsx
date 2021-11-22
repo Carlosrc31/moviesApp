@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import { useQuery } from "../PersonalHooks/useQuery";
 import "./Homepage.css";
 import {getApi} from "../httpApi"
-import Movie from "../Movie/Movie.component.jsx"
+import {Movie, ScrollButton } from "../index"
 import LoadPage from "../Loading/LoadPage.jsx";
 import Search from "../Browser/Search.jsx";
 
@@ -38,14 +38,18 @@ function Homepage(){
             <div className="search">
                <Search /> 
             </div>
-        
+        <div className="toTop">
+               <ScrollButton/> 
+            </div>
         {/* Se genera el tablero con las películas*/} 
         <ul className="homepage_board">
             {moviesList.map((movie)=>{
                 return <Movie key={movie.id} movie={movie}/>
             })}
         </ul>
+        
         </div>
+         
     );
 }
 

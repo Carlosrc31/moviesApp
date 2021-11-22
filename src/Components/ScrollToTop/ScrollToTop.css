@@ -1,0 +1,26 @@
+button{
+
+cursor: pointer;
+background-color: #393E46;
+border:none;
+outline: none;
+color:#f1b50f;
+cursor: pointer;
+
+border-radius: 4px;
+position: fixed;
+text-align: center;
+ }
+ .toTopButton{
+    font-size: 1.7rem;
+    margin: 10px;
+    z-index: 80;
+    right: 0;
+    padding: 10px 10px 10px 10px;
+ }
+    
+   
+button:hover {
+        background-color: #555;
+    }
+    

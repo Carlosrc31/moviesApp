@@ -18,7 +18,8 @@ function App() {
            <NavLink to="/"> 
             <div className="homeIcon">
               <img src="clapperboard.png" />
-              <h1 className="header_title"> MoviExpert</h1> </div>
+              <h1 className="header_title"> MoviExpert</h1>
+            </div>
           </NavLink>
         </header>
         <main>

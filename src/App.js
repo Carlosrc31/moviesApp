@@ -8,14 +8,18 @@ import {
   NavLink
 } from "react-router-dom";
 
+
 function App() {
   return (
     <Fragment>
       <Router>
         <header>
           {/* Al dar click en "movies" nos manda a la Homepage */}
-          <NavLink to="/"> 
-            <h1 className="header_title">Movies</h1>
+           <NavLink to="/"> 
+            <div className="homeIcon">
+              <img src="clapperboard.png" />
+              <h1 className="header_title"> MoviExpert</h1>
+            </div>
           </NavLink>
         </header>
         <main>

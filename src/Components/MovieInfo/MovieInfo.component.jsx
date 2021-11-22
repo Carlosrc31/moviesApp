@@ -2,7 +2,6 @@ import React, { useEffect, useState} from "react";
 import {useParams} from "react-router"
 import {getApi} from "../httpApi"
 import LoadPage from "../Loading/LoadPage.jsx"
-import MovieIn from "./MovieIn.json"
 import "./MovieInfo.css"
 
 function MovieInfo(){
@@ -11,7 +10,7 @@ function MovieInfo(){
     const [MovieInfo, setMovieInfoMovieInfo]=useState(null);// variable donde se guardara el id de la pelicula
     
     useEffect(()=>{
-        setLoading(true)//La pagina estara cargando en espera de la petición de la api 
+        setLoading(true)//La pagina estará cargando en espera de la petición de la api 
         getApi("/movie/"+movieId).then(data=>{
             setMovieInfoMovieInfo(data);
             setLoading(false);
@@ -32,7 +31,7 @@ function MovieInfo(){
     return (
         // Se hace la ruta dinámica con los datos de la API
         <div className="infoContainer">
-            <img className="img size" src={poster} />
+            <img className="img size" alt="Imagen del poster de la película" src={poster} />
             <div className="details size">
                 <p className="item_one"> <strong> Title: </strong> {MovieInfo.title}</p>
                 <p> <strong> Genres: </strong> {MovieInfo.genres.map( genre =>{
@@ -40,7 +39,7 @@ function MovieInfo(){
                 }).join(", ")}</p>
                 <p> <strong> Description: </strong> {MovieInfo.overview}</p>
             </div>
-        </div>
+        </div> 
     );
 }
 

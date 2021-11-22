@@ -1,8 +1,6 @@
 
 // esta es una funcion asincrona la cual usaremos más de una vez en la aplicación porlo cual decidimos añadirla como una funcion importada
 
-import EmptyState from "./EmptyState/EmptyState.component";
-
 //La api nececita de un codigo de autenticacion para funcionar
  export async function getApi(path) {
   return fetch("https://api.themoviedb.org/3" + path, {
@@ -12,6 +10,5 @@ import EmptyState from "./EmptyState/EmptyState.component";
       "Content-Type": "application/json;charset=utf-8",//codigo de autenticacion
     },
   }).then((result) => result.json()).catch(error => {
-    <EmptyState/>
   });
 }

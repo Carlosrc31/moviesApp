@@ -35,7 +35,10 @@ function Homepage(){
 
     return (
         <div>
-        <Search />
+            <div className="search">
+               <Search /> 
+            </div>
+        
         {/* Se genera el tablero con las películas*/} 
         <ul className="homepage_board">
             {moviesList.map((movie)=>{

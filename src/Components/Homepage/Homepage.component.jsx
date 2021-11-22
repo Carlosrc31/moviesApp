@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import { useQuery } from "../PersonalHooks/useQuery";
 import "./Homepage.css";
 import {getApi} from "../httpApi"
-import Movie from "../Movie/Movie.component.jsx"
+import {Movie, ScrollButton } from "../index"
 import LoadPage from "../Loading/LoadPage.jsx";
 import Search from "../Browser/Search.jsx";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -42,6 +42,9 @@ function Homepage(props){
         <div>
             {/* Para el buscador/filtro */}
             <Search setMoviesList={setMoviesList} setPage={setPage} setMoreMovies={setMoreMovies}/>
+            <div className="toTop">
+               <ScrollButton/> 
+            </div>
             {/* Se genera el tablero con las películas*/} 
             <InfiniteScroll
             dataLength={moviesList.length}

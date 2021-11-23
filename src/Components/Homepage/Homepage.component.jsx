@@ -14,7 +14,7 @@ function Homepage(){
     const query = useQuery();
     //variable para guardar el texto de lo que el parametro search tiene almacenado
     const search = query.get("search");
-    console.log(search);
+    
 
     useEffect(()=> {
         setLoading(true);

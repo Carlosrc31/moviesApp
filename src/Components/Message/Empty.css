@@ -1,0 +1,17 @@
+
+.emptyContainer{
+    display: flex;
+    justify-content: center;
+    background-image:url("notfound.jpg");
+    position: relative;
+    margin: 13px 0 0 0;
+    position: relative;
+    margin-left: -8px;
+    height: 70vh;
+    background-position: 50% 50%;
+
+}
+h1{
+    color:#FF87CA;
+    font-size: 3rem;
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.errorContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background: #fff;
+    margin: 0;
+    padding: 0; 
+    height: 100vh;
+}
+.errorContainer h1{
+    font-family: 'Anton', sans-serif;
+    color: #009DAE;
+    font-size: 40px;
+    margin: 0;
+    padding: 20px;
+}
+#img{
+    width: 25em;
+    height: 25em;
+    margin: 0;    
+}

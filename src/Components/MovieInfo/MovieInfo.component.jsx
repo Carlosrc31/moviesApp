@@ -3,6 +3,7 @@ import {useParams} from "react-router"
 import {getApi} from "../httpApi"
 import LoadPage from "../Loading/LoadPage.jsx"
 import "./MovieInfo.css"
+import imgdefault  from "../Movie/INF.png"
 
 function MovieInfo(){
     const {movieId}= useParams();//cada pelicula tiene un id el cual podemos leer con useParams, con este podemos leer la parte de la url que tenga el mismo identificador en este caso movieId
@@ -21,13 +22,14 @@ function MovieInfo(){
     if (Loading) {
         return <LoadPage/>;
     }
+    
 
     if (!MovieInfo){
         return null;
     }
 
     // Obtenemos la imagen de la pelicula obtenemos de la API
-    let poster = "https://image.tmdb.org/t/p/w500" + MovieInfo.poster_path;
+    let poster = MovieInfo.poster_path ? "https://image.tmdb.org/t/p/w500" + MovieInfo.poster_path : imgdefault; //Si no existe un poster se regresara una imagen default.
     return (
         // Se hace la ruta dinámica con los datos de la API
         <div className="infoContainer">

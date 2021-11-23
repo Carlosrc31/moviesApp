@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./Movie.css"
+import imgdefault from "./INF.png";
 
 function Movie(props){
-    let poster = "https://image.tmdb.org/t/p/w300" + props.movie.poster_path;
+    //Se agrego un if ternario para saber cuando agregar una imagen por default si no se encontro el poster dada por la api
+    let poster = props.movie.poster_path ? "https://image.tmdb.org/t/p/w300" + props.movie.poster_path : imgdefault; 
     return (
         // Se genera cada pelicula con su poster y su título
         <li className="item">

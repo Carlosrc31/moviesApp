@@ -4,10 +4,15 @@ Puedes ver la implementación en la siguiente URL: [https://moviexpert.netlify.a
 
 En las siguientes imágenes mostraremos como luce la aplicación en diferentes situaciones:
 Página de inicio
+![alt text](https://github.com/Carlosrc31/moviesApp/blob/main/principal.png)</br>
 Búsqueda
+![alt text](https://github.com/Carlosrc31/moviesApp/blob/main/busqueda.png)</br>
 Detalles de película
+![alt text](https://github.com/Carlosrc31/moviesApp/blob/main/detalle.png)</br>
 Error al acceder a una pagina inexistente 
+![alt text](https://github.com/Carlosrc31/moviesApp/blob/main/error.png)</br>
 Resultado al buscar una película que no se encuentra en el catalogo
+![alt text](https://github.com/Carlosrc31/moviesApp/blob/main/notfound.png)</br>
 
 
 

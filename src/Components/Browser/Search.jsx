@@ -19,7 +19,9 @@ function Search(props){//Buscador de peliculas
         props.setMoviesList([]);
         props.setPage(1);
         props.setMoreMovies(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
+    
     //Función que se mandara a llamar al dar un enter al buscador o dar click en la lupa.
     const handleSubmit = (event) =>{
         event.preventDefault();//Evitar un POST

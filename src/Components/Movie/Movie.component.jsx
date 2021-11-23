@@ -10,7 +10,7 @@ function Movie(props){
         <li className="item">
             <NavLink to={"/movies/" + props.movie.id}>
                 <img className="item_img" src={poster} alt={props.movie.title}/>
-                <div>
+                <div className="item_title">
                     {props.movie.title}
                 </div>
             </NavLink>

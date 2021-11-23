@@ -12,6 +12,16 @@
 
 .img{
     border-radius: 10px;
+    box-shadow: 0 0 30px #f1b50f;
+    height: 600px;
+    width: 400px;
+}
+
+@media (max-width: 560px) {
+    .img{
+        height: auto;
+        width: 80%;
+    }
 }
 
 .details{

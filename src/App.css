@@ -20,16 +20,14 @@ a{
   color: #FFFFFF;
 }
 
- .homeIcon{
-  display: flex;
-  align-items: center;
- }
-
- img{
-   margin: 1rem;
-   height: 2rem;
- }
-
- main{
-  padding-top: 7rem;
- }
+.homeIcon{
+ display: flex;
+ align-items: center;
+}
+img{
+  margin: 1rem;
+  height: 2rem;
+}
+main{
+ padding-top: 7rem;
+}

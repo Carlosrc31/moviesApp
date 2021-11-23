@@ -4,28 +4,32 @@ import {getApi} from "../httpApi"
 import LoadPage from "../Loading/LoadPage.jsx"
 import "./MovieInfo.css"
 import imgdefault  from "../Movie/INF.png"
+import Empty from "../Message/Empty";
 
 function MovieInfo(){
     const {movieId}= useParams();//cada pelicula tiene un id el cual podemos leer con useParams, con este podemos leer la parte de la url que tenga el mismo identificador en este caso movieId
     const [Loading,setLoading] = useState(true) //Estado que determinara si la pagina esta cargando
     const [MovieInfo, setMovieInfoMovieInfo]=useState(null);// variable donde se guardara el id de la pelicula
-    
+    const [error, setError] = useState(false);
     useEffect(()=>{
         setLoading(true)//La pagina estará cargando en espera de la petición de la api 
         getApi("/movie/"+movieId).then(data=>{
             setMovieInfoMovieInfo(data);
             setLoading(false);
-        })
+        }).catch((error) => {setError(true)});
     }, [movieId]);
 
     //Ventana de Loading
     if (Loading) {
         return <LoadPage/>;
     }
-    
 
     if (!MovieInfo){
         return null;
+    }
+
+    if(error){
+       return <Empty/>
     }
 
     // Obtenemos la imagen de la pelicula obtenemos de la API

@@ -30,7 +30,7 @@ function App() {
               <Route path="/movies/:movieId" element={<MovieInfo/>} />{/**/}
               <Route exact path="/" element={<Homepage/>} />
               {/* Caso para cualquier página que no exista, hacer un componente de * y agregarle la ruta Error 404 */}
-              <Route path="/" element={<Error404/>}>
+              <Route path="*" element={<Error404/>}>
               </Route>
           </Switch>
         </main>
